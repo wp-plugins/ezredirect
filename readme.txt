@@ -43,4 +43,8 @@ This section describes how to install the plugin and get it working.
 = 0.0.1 =
 * First released version. Tested internally with about 10 sites.
 
+= 0.0.2 =
+* Code documentation.
+* Fixed bug with source addresses containing URL encoded characters.
+
 == Upgrade Notice ==

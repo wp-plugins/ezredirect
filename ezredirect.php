@@ -4,7 +4,7 @@ Plugin Name: ezRedirect
 Plugin URI: http://www.nuagelab.com/wordpress-plugins/ezredirect
 Description: Allows creation of URL that redirects to pages or other URLs
 Author: NuageLab <wordpress-plugins@nuagelab.com>
-Version: 0.0.1
+Version: 0.0.2
 License: GPLv2 or later
 Author URI: http://www.nuagelab.com/wordpress-plugins
 */
@@ -59,9 +59,7 @@ class ezredirect {
 		$this->upgrade_database();
 		
 		// Do redirect
-		if (!is_admin()) {
-			add_action('parse_request', array(&$this, 'do_redirect'), 10);
-		}
+		add_action('parse_request', array(&$this, 'do_redirect'), 10);
 	} // setup()
 
 	
@@ -121,7 +119,9 @@ class ezredirect {
 		if (strpos($addr,'?') !== false) $addr = substr($addr,0,strpos($addr,'?'));
 		if (substr($addr,-1) == '/') $addr = substr($addr,0,-1);
 		
-		$redirs = $wpdb->get_results( $wpdb->prepare("SELECT * FROM ".$wpdb->prefix.'ezredirect WHERE `source`=%s;', $addr ) );
+		$sql = $wpdb->prepare("SELECT * FROM ".$wpdb->prefix.'ezredirect WHERE `source`=%s;', $addr );
+		
+		$redirs = $wpdb->get_results( $wpdb->prepare("SELECT * FROM ".$wpdb->prefix.'ezredirect WHERE `source`=%s OR `source`=%s;', $addr, urldecode($addr) ) );
 		if (count($redirs) > 0) {
 			$redir = reset($redirs);
 			
@@ -137,6 +137,17 @@ class ezredirect {
 			}
 			if (!empty($target)) {
 				header('Location: '.$target);
+				echo <<<EOD
+<html>
+<head><title>This page has moved</title></head>
+<body>
+	Redirecting to <a href="${target}">${target}</a>.
+	<script type="text/javascript">
+		document.location = "${target}";
+	</script>
+</body>
+</html>
+EOD;
 				die;
 			}
 		}
@@ -365,6 +376,13 @@ class ezredirect {
 EOD;
 	} // admin_page()
 
+	/**
+	 * Display pages in hierarchy in <option> tags for select
+	 *
+	 * @author	Tommy Lacroix <tlacroix@nuagelab.com>
+	 * @access	protected
+	 * @internal
+	 */
 	protected function display_page_options($pages=null, $level=0)
 	{
 		if ($pages === null) {
