@@ -48,3 +48,4 @@ This section describes how to install the plugin and get it working.
 * Fixed bug with source addresses containing URL encoded characters.
 
 == Upgrade Notice ==
+Fixed bug with source addresses containing URL encoded characters.
