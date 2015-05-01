@@ -2,7 +2,7 @@
 Contributors: nuagelab
 Tags: admin, redirection
 Requires at least: 3.0
-Tested up to: 4.1.1
+Tested up to: 4.2.1
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -52,6 +52,9 @@ This section describes how to install the plugin and get it working.
 
 = 0.0.4 =
 * Tested up to WordPress 4.1.1
+
+= 1.0 =
+* Tested up to WordPress 4.2.1
 
 == Upgrade Notice ==
 Fixed bug with source addresses containing URL encoded characters.
