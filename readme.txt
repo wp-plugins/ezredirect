@@ -1,6 +1,7 @@
 === ezRedirect ===
 Contributors: nuagelab
-Tags: admin, redirection
+Donate link: http://www.nuagelab.com/products/wordpress-plugins/
+Tags: admin, administration, links, resources, redirection
 Requires at least: 3.0
 Tested up to: 4.2.1
 Stable tag: trunk
@@ -11,6 +12,15 @@ Allows the creation of redirections to internal pages and posts, and external ad
 == Description ==
 
 Allows the creation of redirections to internal pages and posts, and external addresses.
+
+= Feedback =
+* We are open for your suggestions and feedback - Thank you for using or trying out one of our plugins!
+* Drop us a line [@nuagelab](http://twitter.com/#!/nuagelab) on Twitter
+* Follow us on [our Facebook page](https://www.facebook.com/pages/NuageLab/150091288388352)
+* Drop us a line at [wordpress-plugins@nuagelab.com](mailto:wordpress-plugins@nuagelab.com)
+
+= More =
+* [Also see our other plugins](http://www.nuagelab.com/products/wordpress-plugins/) or see [our WordPress.org profile page](http://profiles.wordpress.org/users/nuagelab/)
 
 == Installation ==
 
@@ -58,3 +68,8 @@ This section describes how to install the plugin and get it working.
 
 == Upgrade Notice ==
 Fixed bug with source addresses containing URL encoded characters.
+
+== Translations ==
+
+* English
+* French
