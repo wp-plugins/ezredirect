@@ -4,7 +4,7 @@ Plugin Name: ezRedirect
 Plugin URI: http://www.nuagelab.com/wordpress-plugins/ezredirect
 Description: Allows creation of URL that redirects to pages or other URLs
 Author: NuageLab <wordpress-plugins@nuagelab.com>
-Version: 1.0
+Version: 1.0.1
 License: GPLv2 or later
 Author URI: http://www.nuagelab.com/wordpress-plugins
 */

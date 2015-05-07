@@ -3,7 +3,7 @@ Contributors: nuagelab
 Donate link: http://www.nuagelab.com/products/wordpress-plugins/
 Tags: admin, administration, links, resources, redirection
 Requires at least: 3.0
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -50,21 +50,24 @@ This section describes how to install the plugin and get it working.
 1. The redirection management screen
 
 == Changelog ==
-= 0.0.1 =
-* First released version. Tested internally with about 10 sites.
+= 1.0.1 =
+* Tested up to WordPress 4.2.2
+
+= 1.0 =
+* Tested up to WordPress 4.2.1
+
+= 0.0.4 =
+* Tested up to WordPress 4.1.1
+
+= 0.0.3 =
+* Text fixes
 
 = 0.0.2 =
 * Code documentation.
 * Fixed bug with source addresses containing URL encoded characters.
 
-= 0.0.3 =
-* Text fixes
-
-= 0.0.4 =
-* Tested up to WordPress 4.1.1
-
-= 1.0 =
-* Tested up to WordPress 4.2.1
+= 0.0.1 =
+* First released version. Tested internally with about 10 sites.
 
 == Upgrade Notice ==
 Fixed bug with source addresses containing URL encoded characters.
